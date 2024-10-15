@@ -1,72 +1,15 @@
-# 視窗程式設計
+# 前端專案
 
-## Electron
+## Electron：跨平台桌面應用開發框架
+- ### 可在 Web、Windows桌面、Mac桌面使用
+- ### 上下文隔離(防止網站訪問Electron內部組件) - preload
 
-## React
+   
 
-## React UI - Chakra
+### 前端框架：React
+### 狀態控制：Recoil
+### 路由：React Router
+### 樣式：Chakra UI
 
-- 於專案目錄下安裝套件
-
-```
-npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
-```
-
-於專案入口文件引入
-
-```tsx
-import * as React from 'react'
-
-// 1. import `ChakraProvider` component
-import { ChakraProvider } from '@chakra-ui/react'
-
-function App() {
-  // 2. Wrap ChakraProvider at the root of your app
-  return (
-    <React.StrictMode>
-      <ChakraProvider> // <-
-        <myApp />
-      </ChakraProvider> // <-
-    </React.StrictMode>
-  )
-}
-```
-
-## Tailwind Css
-
-- 引入 css (依框架不同有所差異)
-- 於專案資料夾輸入以下指令
-  ```
-  npm install -D tailwindcss postcss autoprefixer
-  npx tailwindcss init
-  ```
-- 執行 init 指令自動建立\*.config.js文件後將套件引入
-  - postcss.config.js
-    ```js
-    module.exports = {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {}
-      }
-    }
-    ```
-  - tailwind.config.js
-    ```js
-    /** @type {import('tailwindcss').Config} */
-    module.exports = {
-      content: ['./src/**/*.{html,js}'],
-      theme: {
-        extend: {}
-      },
-      plugins: []
-    }
-    ```
-- 修改css文件引入(記得import）
-  - main.css
-    ```css
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-    ```
-
-## Vite
+### 打包(建構)工具：Vite
+- 各式優化功能
