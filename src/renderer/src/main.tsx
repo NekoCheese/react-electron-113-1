@@ -16,6 +16,7 @@ import {
 import { HomePage } from './routes/HomePage';
 import { ExamplePage } from './routes/ExamplePage';
 import { RecoilRoot } from 'recoil';
+import { TodoPage } from './routes/TodoPage';
 
 const router = createBrowserRouter([
   // 範例路由
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <HomePage />,
+  },
+  {
+    path: "/todo",
+    element: <TodoPage />,
   },
 ]);
 

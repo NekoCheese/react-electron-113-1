@@ -5,7 +5,6 @@ import {
   Flex,
   Avatar,
   HStack,
-  Text,
   IconButton,
   Button,
   Menu,
@@ -49,7 +48,7 @@ const NavLink = (props: navProps) => {
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const navigate = useNavigate()
-  
+
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
