@@ -8,11 +8,11 @@ import {
   Text,
   Flex,
   Tag,
-  useColorModeValue,
+  useColorModeValue
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
-const Logo = (props: any) => {
+const Logo = (props: any): React.ReactElement => {
   return (
     <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
@@ -35,11 +35,12 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
   )
 }
 
-export default function LargeWithLogoCentered() {
+export default function LargeWithLogoCentered(): React.ReactElement {
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+      color={useColorModeValue('gray.700', 'gray.200')}
+    >
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={'flex-start'}>
@@ -55,7 +56,8 @@ export default function LargeWithLogoCentered() {
                 size={'sm'}
                 bg={useColorModeValue('green.300', 'green.800')}
                 ml={2}
-                color={'white'}>
+                color={'white'}
+              >
                 New
               </Tag>
             </Stack>
@@ -133,15 +135,16 @@ export default function LargeWithLogoCentered() {
             borderBottom: '1px solid',
             borderColor: useColorModeValue('gray.200', 'gray.700'),
             flexGrow: 1,
-            mr: 8,
+            mr: 8
           }}
           _after={{
             content: '""',
             borderBottom: '1px solid',
             borderColor: useColorModeValue('gray.200', 'gray.700'),
             flexGrow: 1,
-            ml: 8,
-          }}>
+            ml: 8
+          }}
+        >
           <Logo />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>

@@ -14,26 +14,25 @@ import {
   StackDivider,
   useColorModeValue,
   List,
-  ListItem,
+  ListItem
 } from '@chakra-ui/react'
 import { MdLocalShipping } from 'react-icons/md'
 
 import ElectronSVG from '../assets/electron.svg'
 
-export default function Simple() {
+export default function Simple(): React.ReactElement {
   return (
     <Container maxW={'7xl'}>
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 24 }}>
+        py={{ base: 18, md: 24 }}
+      >
         <Flex>
           <Image
             rounded={'md'}
             alt={'product image'}
-            src={
-              ElectronSVG
-            }
+            src={ElectronSVG}
             align={'center'}
             w={'100%'}
             h={{ base: '100%', sm: '400px', lg: '500px' }}
@@ -44,13 +43,15 @@ export default function Simple() {
             <Heading
               lineHeight={1.1}
               fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
+              fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}
+            >
               Electron
             </Heading>
             <Text
               color={useColorModeValue('gray.900', 'gray.400')}
               fontWeight={300}
-              fontSize={'2xl'}>
+              fontSize={'2xl'}
+            >
               $350.00 USD
             </Text>
           </Box>
@@ -58,21 +59,21 @@ export default function Simple() {
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={'column'}
-            divider={
-              <StackDivider borderColor={useColorModeValue('gray.200', 'gray.600')} />
-            }>
+            divider={<StackDivider borderColor={useColorModeValue('gray.200', 'gray.600')} />}
+          >
             <VStack spacing={{ base: 4, sm: 6 }}>
               <Text
                 color={useColorModeValue('gray.500', 'gray.400')}
                 fontSize={'2xl'}
-                fontWeight={'300'}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore
+                fontWeight={'300'}
+              >
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore
               </Text>
               <Text fontSize={'lg'}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet
-                at delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis
-                porro, quae, quisquam quos reprehenderit velit? Natus, totam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet at
+                delectus doloribus dolorum expedita hic, ipsum maxime modi nam officiis porro, quae,
+                quisquam quos reprehenderit velit? Natus, totam.
               </Text>
             </VStack>
             <Box>
@@ -81,15 +82,15 @@ export default function Simple() {
                 color={useColorModeValue('yellow.500', 'yellow.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
-                mb={'4'}>
+                mb={'4'}
+              >
                 Features
               </Text>
 
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <List spacing={2}>
                   <ListItem>Chronograph</ListItem>
-                  <ListItem>Master Chronometer Certified</ListItem>{' '}
-                  <ListItem>Tachymeter</ListItem>
+                  <ListItem>Master Chronometer Certified</ListItem> <ListItem>Tachymeter</ListItem>
                 </List>
                 <List spacing={2}>
                   <ListItem>Anti‑magnetic</ListItem>
@@ -104,7 +105,8 @@ export default function Simple() {
                 color={useColorModeValue('yellow.500', 'yellow.300')}
                 fontWeight={'500'}
                 textTransform={'uppercase'}
-                mb={'4'}>
+                mb={'4'}
+              >
                 Product Details
               </Text>
 
@@ -143,8 +145,7 @@ export default function Simple() {
                   <Text as={'span'} fontWeight={'bold'}>
                     Crystal:
                   </Text>{' '}
-                  Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment
-                  inside
+                  Domed, scratch‑resistant sapphire crystal with anti‑reflective treatment inside
                 </ListItem>
                 <ListItem>
                   <Text as={'span'} fontWeight={'bold'}>
@@ -167,8 +168,9 @@ export default function Simple() {
             textTransform={'uppercase'}
             _hover={{
               transform: 'translateY(2px)',
-              boxShadow: 'lg',
-            }}>
+              boxShadow: 'lg'
+            }}
+          >
             Add to cart
           </Button>
 

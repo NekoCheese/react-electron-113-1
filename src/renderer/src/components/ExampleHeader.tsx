@@ -14,10 +14,11 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack,
+  Stack
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { useNavigate } from 'react-router-dom'
+import ElectronSVG from '../assets/electron.svg'
 
 interface navProps {
   children: React.ReactNode
@@ -25,8 +26,7 @@ interface navProps {
 
 const Links = ['HomePage', 'Projects', 'Team']
 
-
-const NavLink = (props: navProps) => {
+const NavLink = (props: navProps): React.ReactElement => {
   const { children } = props
 
   return (
@@ -37,15 +37,16 @@ const NavLink = (props: navProps) => {
       rounded={'md'}
       _hover={{
         textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
+        bg: useColorModeValue('gray.200', 'gray.700')
       }}
-      href={'#'}>
+      href={'#'}
+    >
       {children}
     </Box>
   )
 }
 
-export default function Simple() {
+export default function Simple(): React.ReactElement {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const navigate = useNavigate()
 
@@ -67,24 +68,18 @@ export default function Simple() {
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
-            <Button onClick={() => {
-              navigate('/home')
-            }}>HomePage</Button>
+            <Button
+              onClick={() => {
+                navigate('/home')
+              }}
+            >
+              HomePage
+            </Button>
           </HStack>
           <Flex alignItems={'center'}>
             <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}>
-                <Avatar
-                  size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
-                />
+              <MenuButton as={Button} rounded={'full'} variant={'link'} cursor={'pointer'} minW={0}>
+                <Avatar size={'sm'} src={ElectronSVG} />
               </MenuButton>
               <MenuList>
                 <MenuItem>Link 1</MenuItem>
