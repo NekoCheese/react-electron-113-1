@@ -56,6 +56,10 @@ const LinkItems: Array<LinkItemProps> = [
 export default function SimpleSidebar(): React.ReactElement {
   const [isLogin, setLogin] = useRecoilState(loginState)
 
+  useEffect(() => {
+    setLogin
+  }, [])
+
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       {!isLogin && <PinModal />}
@@ -100,6 +104,7 @@ interface NavItemProps extends FlexProps {
   icon: IconType
   children: ReactText
 }
+
 const NavItem = ({ icon, children, ...rest }: NavItemProps): React.ReactElement => {
   return (
     <Box _focus={{ boxShadow: 'none' }}>
