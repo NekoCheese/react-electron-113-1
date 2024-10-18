@@ -8,7 +8,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// React Router
+// Other
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { HomePage } from './routes/HomePage'
 import { ExamplePage } from './routes/ExamplePage'
@@ -16,6 +16,8 @@ import { RecoilRoot } from 'recoil'
 import { TodoPage } from './routes/TodoPage'
 import { MqttPage } from './routes/MqttPage'
 import { SettingPage } from './routes/SettingPage'
+import { SearchPage } from './routes/SearchPage'
+import { VideoPage } from './routes/VideoPage'
 
 const router = createBrowserRouter([
   // 範例路由
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
   {
     path: '/setting',
     element: <SettingPage />
+  },
+  {
+    path: '/search',
+    element: <SearchPage />
+  },
+  {
+    path: '/video',
+    element: <VideoPage />
   },
   // 捕捉所有未匹配路由，並重定向到 HomePage
   {

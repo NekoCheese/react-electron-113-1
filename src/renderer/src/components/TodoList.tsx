@@ -11,10 +11,10 @@ import {
   Td,
   Button
 } from '@chakra-ui/react'
-import { BasicBlock } from './BasicBlock'
-import { useRecoilState } from 'recoil'
-import { TodoItem, todoListState } from '@renderer/storage/todoList'
 import { useState } from 'react'
+import { useRecoilState } from 'recoil'
+import { BasicBlock } from './BasicBlock'
+import { TodoItem, todoListState } from '@renderer/storage/todoList'
 
 export const TodoList = (): React.ReactElement => {
   const [todoList, setTodoList] = useRecoilState(todoListState) // 讀取和修改 todoList 狀態
