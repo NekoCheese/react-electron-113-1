@@ -11,7 +11,17 @@ import {
   Button,
   useColorMode
 } from '@chakra-ui/react'
-import { FiHome, FiSettings, FiBookmark, FiMoon, FiSun, FiRss, FiCoffee } from 'react-icons/fi'
+import {
+  FiHome,
+  FiSettings,
+  FiBookmark,
+  FiMoon,
+  FiSun,
+  FiRss,
+  FiCoffee,
+  FiSearch,
+  FiVideo
+} from 'react-icons/fi'
 import { IconType } from 'react-icons'
 import { ReactText, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -45,6 +55,16 @@ const LinkItems: Array<LinkItemProps> = [
     name: 'Setting',
     routePath: '/setting',
     icon: FiSettings
+  },
+  {
+    name: 'Youtube',
+    routePath: '/video',
+    icon: FiVideo
+  },
+  {
+    name: 'Google',
+    routePath: '/search',
+    icon: FiSearch
   },
   {
     name: 'Example',
